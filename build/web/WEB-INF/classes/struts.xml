@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="*" class="control.ControlForo" method="{1}">
+            <result name="verSeccion">foro.jsp</result>
+            <result name="ko">index.jsp</result>
+            <result name="ok">foro.jsp</result>
+            <result name="tema">tema.jsp</result>
+            <result name="seccion">foro.jsp</result>
+            <result name="nuevoTema">tema.jsp</result>
+        </action>
+    </package>
+</struts>
